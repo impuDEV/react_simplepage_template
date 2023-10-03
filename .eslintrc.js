@@ -28,7 +28,8 @@ module.exports = {
 	},
 	'plugins': [
 		'@typescript-eslint',
-		'react'
+		'react',
+		'react-hooks',
 	],
 	'rules': {
 		'indent': [
@@ -57,10 +58,17 @@ module.exports = {
 		'react/no-deprecated': 'off',
 		'no-undef': 'off',
 		'react/display-name': 'off',
+		'react-hooks/rules-of-hooks': 'error',
+		'react-hooks/exhaustive-deps': 'error',
 		'object-curly-spacing': ['error', 'always'],
 	},
 	globals: {
 		'__IS_DEV__': true,
 		'__PROJ_NAME__': true
+	},
+	'settings': {
+		'react': {
+			'version': 'detect'
+		}
 	}
 }
